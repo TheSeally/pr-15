@@ -26,6 +26,7 @@ const registerAdmin = (req, res) => {
 
 const authAdmin = (req, res) => {
   const { email, password } = req.body;
+  console.log({ email, password })
   // TODO: Move to util
   if (!email || !password) return res.status(400).send({ message: 'Email или пароль не могут быть пустыми' });
 
