@@ -20,8 +20,8 @@ mongoose.connect('mongodb://localhost:27017/mydb', {
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api', usersRouter);
-app.use('/api', adminRouter);
+app.use('/', usersRouter);
+app.use('/', adminRouter);
 
 
 app.listen(PORT, () => {
